@@ -1,0 +1,45 @@
+.galeria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "logo lugar"
+        "oferta1 oferta2"
+        "comida espera";
+    padding: 20px;
+    text-align: center;
+}
+.galeria-grid a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+	background: #D7BDE2;
+    border: 2px solid black;
+}
+.galeria-grid a:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.galeria-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.galeria-grid a {
+    text-decoration: none;
+    color: black;
+}
+.galeria-grid a:nth-child(1) { grid-area: logo; }
+.galeria-grid a:nth-child(2) { grid-area: lugar; }
+.galeria-grid a:nth-child(3) { grid-area: comida; }
+.galeria-grid a:nth-child(4) { grid-area: oferta1; }
+.galeria-grid a:nth-child(5) { grid-area: oferta2; }
+.galeria-grid a:nth-child(6) { grid-area: espera; }

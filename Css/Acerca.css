@@ -1,0 +1,23 @@
+.acerca-section {
+    text-align: center;
+    margin-top: 20px;
+}
+.acerca-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.acerca-text {
+    flex: 1;
+    text-align: left;
+}
+.acerca-img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+	border-radius: 10px;
+}
+.acerca-text-b {
+    text-align: center;
+    clear: both;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="description" content="Proyecto de Diseño de Paginas Web">
+    <meta name="keywords" content="Proyecto, Pupleria, Mirasol">
+    <link rel="icon" href="Media/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Css/General.css">
+    <link rel="stylesheet" type="text/css" href="Css/Servicios.css">
+    <title>Pulperia Mirasol - Servicios</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="Media/Banner.jpg" alt="Banner Image">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+    </nav>
+    <div class="content-box">
+        <p>
+			Artículos con el símbolo de exclamación poseen promociones:<span><img src="Media/Exclamacion.png" alt="Exclamacion Image" class="exclamacion-image"></span>
+		</p>
+		<input type="text" id="busquedaInput" placeholder="Buscar elementos" class="search-bar">
+        <table class="servicios-table">
+            <tr>
+                <td><a href="producto1.html"><img src="Media/Producto1.jpg" alt="Producto1 Image" class="producto-image">Zanahoria</a></td>
+                <td><a href="producto2.html"><img src="Media/Producto2.jpg" alt="Producto2 Image" class="producto-image">Cebolla</a></td>
+                <td><a href="producto6.html" class="promocion"><img src="Media/Producto6.jpg" alt="Producto6 Image" class="producto-image">Dulce</a></td>
+            </tr>
+            <tr>
+                <td><a href="producto4.html"><img src="Media/Producto4.jpg" alt="Producto4 Image" class="producto-image">Frijoles Enlatados</a></td>
+                <td><a href="producto5.html" class="promocion"><img src="Media/Producto5.jpg" alt="Producto5 Image" class="producto-image">Paleta</a></td>
+                <td><a href="producto3.html"><img src="Media/Producto3.jpg" alt="Producto3 Image" class="producto-image">Huevos</a></td>
+            </tr>
+            <tr>
+                <td><a href="producto7.html" class="promocion"><img src="Media/Producto7.jpg" alt="Producto7 Image" class="producto-image">Cuaderno</a></td>
+                <td><a href="producto8.html"><img src="Media/Producto8.jpg" alt="Producto8 Image" class="producto-image">Leche</a></td>
+                <td><a href="producto9.html"><img src="Media/Producto9.jpg" alt="Producto9 Image" class="producto-image">Galletas</a></td>
+            </tr>
+        </table>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+        <p>Brian Josue Gonzalez Segura - 2023</p>
+        <p>Proyecto de Diseño De Paginas Web</p>
+    </footer>
+	<script>
+		function filtrarElementos() {
+			var input, filter, table, tr, td, i, j, txtValue;
+			input = document.getElementById("busquedaInput");
+			filter = input.value.toUpperCase();
+			table = document.querySelector(".servicios-table");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td");
+				for (j = 0; j < td.length; j++) {
+					txtValue = td[j].textContent || td[j].innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						td[j].style.display = "";
+					} else {
+						td[j].style.display = "none";
+					}
+				}
+			}
+		}
+		document.getElementById("busquedaInput").addEventListener("keyup", filtrarElementos);
+	</script>
+</body>
+</html>

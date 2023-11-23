@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="description" content="Proyecto de Diseño de Paginas Web">
+    <meta name="keywords" content="Proyecto, Pupleria, Mirasol">
+    <link rel="icon" href="Media/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Css/General.css">
+    <link rel="stylesheet" type="text/css" href="Css/Productos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Pulperia Mirasol - Productos</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="Media/Banner.jpg" alt="Banner Image">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+    </nav>
+    <div class="content-box">
+        <div class="product-box">
+            <img src="Media/Producto7.jpg" alt="Producto Image" class="product-image">
+            <div class="product-info">
+                <div class="info-row">
+					<div class="info-category">Nombre:</div>
+					<div class="info-value nombre-producto">Cuaderno</div>
+				</div>
+				<div class="info-row">
+					<div class="info-category">Marca:</div>
+					<div class="info-value marca-producto">Apolion</div>
+				</div>
+				<div class="info-row">
+					<div class="info-category">Precio:</div>
+					<div class="info-value precio-producto">2500</div>
+				</div>
+				<div class="info-row">
+					<div class="info-category">Promocion:</div>
+					<div class="info-value Promocion">Dos Por Uno 2x1</div>
+				</div>
+            </div>
+        </div>
+		<div class="purchase-section">
+			<div class="tax-info">
+				<p>Impuestos aplicados según provincia:</p>
+				<p> - Alajuela, San José, Limón: 10%</p>
+				<p> - Cartago, Guanacaste, Puntarenas: 20%</p>
+				<p>- Heredia: 5%</p>
+			</div>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" onkeydown="return false">
+			<label for="provincias">Provincia:</label>
+			<select id="provincias">
+				<option value="alajuela" selected>Alajuela</option>
+				<option value="san-jose">San José</option>
+				<option value="limon">Limón</option>
+				<option value="cartago">Cartago</option>
+				<option value="guanacaste">Guanacaste</option>
+				<option value="puntarenas">Puntarenas</option>
+				<option value="heredia">Heredia</option>
+			</select>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMensaje" onclick="mostrarCompra()">Realizar compra</button>
+		</div>
+	</div>
+	<div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="modalMensajeLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMensajeLabel">Compra Realizada</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+					
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+        <p>Brian Josue Gonzalez Segura - 2023</p>
+        <p>Proyecto de Diseño De Paginas Web</p>
+    </footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-fzNkuAz/w1JLAf3e+5DOKIeAy5L1j9cU9aUmXnr25DK0NnTVyXLv5CqACr9GDFKn" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6mL3/cQD5N2dI0KFdd4eXn2l1zIwtaW4" crossorigin="anonymous"></script>
+    <script>
+        function realizarCompra() {
+			var nombreProducto = document.querySelector('.nombre-producto').textContent;
+			var marcaProducto = document.querySelector('.marca-producto').textContent;
+			var precioProducto = document.querySelector('.precio-producto').textContent;
+			var cantidad = document.getElementById('quantity').value;
+			var precioFinal = precio(cantidad, precioProducto);
+			var impuesto = 0.1;
+			var provinciaSeleccionada = document.getElementById("provincias").value;
+			if (
+				provinciaSeleccionada === "alajuela" ||
+				provinciaSeleccionada === "san-jose" ||
+				provinciaSeleccionada === "limon"
+			) {
+				impuesto = 0.1;
+			} else if (
+				provinciaSeleccionada === "cartago" ||
+				provinciaSeleccionada === "guanacaste" ||
+				provinciaSeleccionada === "puntarenas"
+			) {
+				impuesto = 0.2;
+			} else if (provinciaSeleccionada === "heredia") {
+				impuesto = 0.05;
+			}
+			var impuestoAplicado = precioFinal * impuesto;
+			var precioTotalConImpuesto = precioFinal + impuestoAplicado;
+			var promocion = 0.5;
+            var precioTotalConPromocion = precioTotalConImpuesto * promocion;
+			if(cantidad == 1){
+			return `<p>Gracias por su compra de ${nombreProducto} ${marcaProducto}. Has comprado ${cantidad} unidades, con un precio de ${precioFinal} Colones. El impuesto aplicado es de ${impuesto * 100}% (${impuestoAplicado} Colones) y el precio total con impuesto es ${precioTotalConImpuesto} Colones. </p>`;
+			}else{
+			return `<p>Gracias por su compra de ${nombreProducto} ${marcaProducto}. Has comprado ${cantidad} unidades, con un precio de ${precioFinal} Colones. El impuesto aplicado es de ${impuesto * 100}% (${impuestoAplicado} Colones) y el precio total con impuesto es ${precioTotalConImpuesto} Colones. Por la Promocion de dos x Uno se ha reducido el precio total a ${precioTotalConPromocion} Colones.</p>`;
+			}
+		}
+        function precio(cantidad, precio) {
+            var preciofinal = parseInt(precio) * parseInt(cantidad);
+            return preciofinal;
+        }
+		function mostrarCompra() {
+        document.querySelector('.modal-body').innerHTML = realizarCompra();
+		}
+    </script>
+</body>
+</html>

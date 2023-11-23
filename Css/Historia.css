@@ -1,0 +1,17 @@
+.lugar-image {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.historia-section {
+    margin: 20px;
+    text-align: justify;
+}
+.historia-text {
+    margin: 10px 0;
+}
+h2 {
+    font-weight: bold;
+    text-align: center;
+}

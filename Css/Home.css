@@ -1,0 +1,99 @@
+#myCarousel {
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+}
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+.content-column {
+    flex: 1;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+	width: 100%;
+	background: rgba(255, 150, 150, 0.7);
+}
+.text-b, .text-c, .text-d, .text-e {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+.text-b, .text-c {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.text-b {
+    margin: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+.text-b:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.text-c {
+    margin: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+.text-c:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#text-section {
+    display: flex;
+    justify-content: space-between;
+}
+.offer-tabs-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+.offer-tab {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 60px solid green;
+}
+.offer-tab:hover {
+    right: 0;
+}
+.offer-tab span {
+    display: none;
+}
+.offer-tab:hover span {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -150px;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 999;
+}
+#offer-tab-1 {
+	margin-top: 120px;
+}
+#offer-tab-2 {
+	margin-top: 60px;
+}
+#offer-tab-3 {
+	margin-bottom: 200px;
+}

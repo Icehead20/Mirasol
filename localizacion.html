@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="description" content="Proyecto de Diseño de Paginas Web">
+    <meta name="keywords" content="Proyecto, Pupleria, Mirasol">
+    <link rel="icon" href="Media/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Css/General.css">
+    <link rel="stylesheet" type="text/css" href="Css/Localizacion.css">
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Pulperia Mirasol - Localizacion</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="Media/Banner.jpg" alt="Banner Image">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+    </nav>
+    <div class="content-box">
+        <h1 class="titulo">Ubicación de nuestro local</h1>
+        <div id="map"></div>
+		<div id="output"></div>
+        <p>Nos puede encontrar en esta ubicación abierto de lunes a domingo de 10 am a 11 pm</p>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+        <p>Brian Josue Gonzalez Segura - 2023</p>
+        <p>Proyecto de Diseño De Paginas Web</p>
+    </footer>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia2NoYXZlcyIsImEiOiJjbG8zM3ZkNXoxcHZ3MmxxZWl1a3NhYmh2In0.2i7RGPqWoXmnaQizvPGXvQ';
+        function initMap() {
+            var LatLng = [-84.2502774, 10.0154838];
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: LatLng,
+                zoom: 15
+            });
+            var marker = new mapboxgl.Marker()
+                .setLngLat(LatLng)
+                .setPopup(new mapboxgl.Popup().setHTML('<h3>Pulperia Mirasol</h3>'))
+                .addTo(map);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            initMap();
+        });
+    </script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</body>
+</html>

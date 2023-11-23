@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="description" content="Proyecto de Diseño de Paginas Web">
+    <meta name="keywords" content="Proyecto, Pupleria, Mirasol">
+    <link rel="icon" href="Media/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Css/General.css">
+    <link rel="stylesheet" type="text/css" href="Css/Contacto.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Pulperia Mirasol - Contacto</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="Media/Banner.jpg" alt="Banner Image">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+    </nav>
+    <div class="content-box">
+        <div class="text-a">
+            <h1><strong>Contactos Generales</strong></h1>
+            <p>Teléfono: 12384-01840</p>
+            <p>Email: info@pulperiamirasol.com</p>
+            <p>Fundado Por: Karen Mirasol</p>
+        </div>
+        <div class="text-a">
+            <h2>Contacto De Contratación</h2>
+            <form id="contratacion-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" required><br>
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" required><br>
+                <label for="rango-ingreso">Rango de Ingreso: de 1 a 5</label>
+                <input type="range" id="rango-ingreso" min="1" max="5"><br>
+                <label for="genero">Género:</label>
+                <select id="genero" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select><br>
+                <label for="grado-academico">Grado Académico:</label>
+                <select id="grado-academico" multiple>
+                    <option value="bachillerato">Bachillerato</option>
+                    <option value="licenciatura">Licenciatura</option>
+                    <option value="maestria">Maestría</option>
+                    <option value="doctorado">Doctorado</option>
+                </select><br>
+                <input type="hidden" id="edad" value="">
+                <button type="button" id="enviar" data-toggle="modal" data-target="#modalMensaje">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="modalMensajeLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalMensajeLabel">Mensaje</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="localizacion.html">Localización</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca De</a></li>
+        </ul>
+        <p>Brian Josue Gonzalez Segura - 2023</p>
+        <p>Proyecto de Diseño De Paginas Web</p>
+    </footer>
+    <script src="contacto.js"></script>
+</body>
+</html>
